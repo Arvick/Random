@@ -25,4 +25,5 @@ for i in newp:
             else:
                 sent[a[count]][a[count+1]]=1
         count+=1
-print(sent)
+for key,value in sent.items():
+    print(key,value)
