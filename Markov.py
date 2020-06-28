@@ -1,5 +1,6 @@
+import random
 prime=[]
-forbidden=["'",",",":",";","?","!","-","/","&","#","@","*","."]
+forbidden=["'",",",":",";","?","!","-","/","&","#","@","*",".",'"']
 with open('x.txt') as obj:
     for string in obj.readlines():
         prime.append(string[:-2])
@@ -10,8 +11,6 @@ for i in prime:
         if n in forbidden:
             temp.remove(n)
     newp.append("".join(temp))
-test="The quick brown fox jumps over the lazy dog"
-b=[i for i in test]
 sent={}
 for i in newp:
     a=i.lower().split()
