@@ -31,28 +31,37 @@ for i in prime:
             else:
                 sent[a[count]][a[count+1]]=1
         count+=1
+for i in prime:
+    a=i.lower().split()
+    if a!=[]:
+        if a[-1] not in sent.keys():
+            sent[a[-1]]={random.choice(list(sent.keys())):1}
 
-def generate(num,dict):
+        
+
+def generate(num,dicti):
     tem=[]
-    keys=list(dict.keys())
-    values=list(dict.values())
+    keys=list(dicti.keys())
+    values=list(dicti.values())
     tem.append(random.choice(keys))
     while len(tem)<num:
       if tem[-1] not in keys:
         tem.append(random.choice(keys))
       else:
-        valuedict=dict[tem[-1]]
+        valuedict=dicti[tem[-1]]
         tem.append(random.choice(list(valuedict.keys())))
       if tem[-1]==tem[-2]:
         tem.append(random.choice(keys))
-    for i in tem:
-      i.capitalize()
+      keys=list(dicti[tem[-1]].keys())
+
+      
+    
     return(" ".join(tem))
 
       
 
 
-for i in range(1,41):
-  print(generate(random.randrange(1,101),sent),"\n")
-#for key,value in sent.items():
- # print(key,value)
+#for i in range(1,31):
+ #   print(generate(random.randrange(10,101),sent),"\n")
+for key,value in sent.items():
+ print(key,value)
