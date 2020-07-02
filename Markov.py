@@ -49,11 +49,22 @@ def generate(num,dicti):
         tem.append(random.choice(keys))
       else:
         valuedict=dicti[tem[-1]]
-        tem.append(random.choice(list(valuedict.keys())))
+        templist=[]
+        if len(list(valuedict.items()))==1:
+            tem.append(random.choice(keys))
+        else:
+            for key,value in valuedict.items():
+                count=0
+                while count<value:
+                    templist.append(key)
+                    count+=1
+            tem.append(random.choice(templist))
+            if tem[-1]==tem[-2]:
+                tem.append(random.choice(keys))
       if tem[-1]==tem[-2]:
         tem.append(random.choice(keys))
       keys=list(dicti[tem[-1]].keys())
-
+   
       
     
     return(" ".join(tem))
@@ -61,7 +72,7 @@ def generate(num,dicti):
       
 
 
-#for i in range(1,31):
- #   print(generate(random.randrange(10,101),sent),"\n")
-for key,value in sent.items():
- print(key,value)
+for i in range(1,11):
+    print(generate(random.randrange(10,101),sent),"\n")
+#for key,value in sent.items():
+# print(key,value)
