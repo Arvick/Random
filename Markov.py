@@ -1,7 +1,7 @@
 import random
-forbidden=[",",":",";","?","!","-","/","&","#","@","*",".",'"',"_","(",")","-","“","”","-","[","]"]
+forbidden=[",",":",";","?","!","/","&","#","@",".",'"',"_","(",")","-","“","”","-","[","]","'","’",'‘']
 prime=[]
-with open('x.txt') as obj:
+with open('y.txt',encoding='utf-8') as obj:
     temp=obj.readlines()
     for i in temp:
         prime.append(i.strip())
@@ -50,8 +50,8 @@ def generate(num,dicti):
       else:
         valuedict=dicti[tem[-1]]
         templist=[]
-        if len(list(valuedict.items()))==1:
-            tem.append(random.choice(keys))
+        if len(valuedict.items())==1:
+            tem.append(random.choice(list(dicti.keys())))
         else:
             for key,value in valuedict.items():
                 count=0
@@ -59,20 +59,14 @@ def generate(num,dicti):
                     templist.append(key)
                     count+=1
             tem.append(random.choice(templist))
-            if tem[-1]==tem[-2]:
-                tem.append(random.choice(keys))
       if tem[-1]==tem[-2]:
         tem.append(random.choice(keys))
       keys=list(dicti[tem[-1]].keys())
-   
-      
-    
     return(" ".join(tem))
 
       
 
-
 for i in range(1,11):
-    print(generate(random.randrange(10,101),sent),"\n")
+    print(generate(random.randrange(10,20),sent),"\n")
 #for key,value in sent.items():
-# print(key,value)
+#    print((key,value),"\n")
