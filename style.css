@@ -1,4 +1,30 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 3%;
+  background-image: url(Images/Background.png);
+  background-size: cover;
+}
+
+h1 {
+  color: rgb(70, 27, 27); 
+  background-color: cadetblue;
+}
+
+#contents{
+  background-color: black;
+  color: white;
+}
+
+ol {
+  background-color: black;
+}
+
+.first{
+  float: left;
+  width: auto;
+
+}
+.next {
+  width: auto;
+  float: right;
 }
