@@ -18,6 +18,7 @@ h1 {
 #contents{
   background-color: black;
   color: white;
+  border: 10px solid orange;
 }
 
 ol {
@@ -25,21 +26,28 @@ ol {
 }
 
 .first{
-  float: right;
-  height:auto;
+  grid-area: first;
   width: 50%;
 
 }
+.grid{
+  display: grid;
+  grid-template-columns: auto  auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "title title"
+  "first image"
+  "contents right";
+}
 .next {
   width: 50%;
-  height: auto;
-  float: right;
+  
   border: none;
 }
 
 .body{
   background-color: transparent;
-
+ 
 }
 
 .unord{
@@ -50,4 +58,24 @@ ol {
 
 img {
   border: 20px solid rebeccapurple;
+}
+
+.right{
+  grid-area: right;
+}
+
+
+
+.title{
+  grid-area: title;
+}
+
+.image{
+  grid-area: image;
+  
+  
+}
+
+.contents{
+  grid-area: contents;
 }
