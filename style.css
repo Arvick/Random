@@ -25,23 +25,18 @@ ol {
   background-color: black;
 }
 
-.first{
-  grid-area: first;
-  width: 50%;
 
-}
 .grid{
   display: grid;
-  grid-template-columns: auto  auto;
+  grid-template-columns: 1fr  1fr; 
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
   "title title"
-  "first image"
-  "contents right";
+  "first first"
+  "contents contents";
 }
-.next {
-  width: 50%;
-  
+.graphic {
+  width: 5000px;
   border: none;
 }
 
@@ -71,11 +66,13 @@ img {
 }
 
 .image{
-  grid-area: image;
-  
-  
+  grid-area: auto;
 }
 
 .contents{
   grid-area: contents;
+}
+
+.ordlist{
+  border: 10px solid orange;
 }
