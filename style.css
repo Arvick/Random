@@ -15,6 +15,9 @@ h1 {
   
 }
 
+h3{
+  text-decoration: underline;
+}
 #contents{
   background-color: black;
   color: white;
@@ -25,6 +28,9 @@ ol {
   background-color: black;
 }
 
+ul{
+  background-color: black;
+}
 
 .grid{
   display: grid;
@@ -51,9 +57,7 @@ ol {
   margin: 0;
 }
 
-img {
-  border: 20px solid rebeccapurple;
-}
+
 
 .right{
   grid-area: right;
@@ -71,8 +75,23 @@ img {
 
 .contents{
   grid-area: contents;
+  background-color: none;
 }
 
 .ordlist{
   border: 10px solid orange;
+}
+
+.bullets{
+  font-size: 16px;
+}
+
+.headb{
+  font-size: 20px;
+}
+
+.symptomimage{
+  height: 15%;
+  width: 15%;
+  padding: 15px;
 }
