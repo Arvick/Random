@@ -36,10 +36,11 @@ ul{
   display: grid;
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
   "title title"
   "first first"
   "contents contents";
+  border-spacing: 0%;
 }
 .graphic {
   width: 5000px;
