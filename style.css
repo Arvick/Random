@@ -95,3 +95,21 @@ ul{
   width: 15%;
   padding: 15px;
 }
+
+
+.innerlist{
+  font-size: 20px;
+  text-decoration: underline;
+  color: crimson;
+}
+
+.border2{
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+
+.border1 > li{
+  font-size: 12px;
+  font-style: none;
+}
